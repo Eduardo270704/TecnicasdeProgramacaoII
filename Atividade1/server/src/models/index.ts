@@ -69,6 +69,18 @@ const userSchema = new Schema({
     default: Date.now,
     type: Date,
   },
+  user_usuario: {
+    maxlenght: 50,
+    type: String,
+    unique: true,
+    required: true,
+  },
+  user_password: {
+    maxlenght: 20,
+    type: String,
+    required: true,
+    select: false,
+  },
 });
 
 const estadosSchema = new Schema({
